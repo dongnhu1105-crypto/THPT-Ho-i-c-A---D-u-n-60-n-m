@@ -1,0 +1,186 @@
+/* prediction.css
+   Thiết kế gọn, không đụng class lớn của trang chính.
+*/
+
+:root {
+  --bg1: #7ab2ff;
+  --bg2: #6e60e5;
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --accent: #ffde59;
+  --paper-bg: #fff8dc;
+  --text-dark: #222;
+  --radius: 18px;
+  --glass-blur: 10px;
+}
+
+/* Widget container (can be embedded anywhere) */
+.prediction-widget {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: white;
+  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+/* Card */
+.pw-card {
+  width: 100%;
+  max-width: 640px;
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title & subtitle */
+.pw-title {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.pw-sub {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+}
+
+/* Controls */
+.pw-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.pw-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.pw-btn:active {
+  transform: translateY(1px);
+}
+
+.pw-btn:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.18);
+  outline-offset: 3px;
+}
+
+/* Primary button */
+.pw-btn-primary {
+  background: linear-gradient(135deg, var(--accent), #ffd36b);
+  color: #222;
+}
+
+.pw-btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Result paper */
+.pw-result {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pw-paper {
+  width: 92%;
+  max-width: 520px;
+  background: var(--paper-bg);
+  color: var(--text-dark);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transform-origin: center top;
+  /* paper animation will be applied when un-hidden */
+}
+
+/* Text inside paper */
+.pw-text {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* meta: timestamp or note */
+.pw-meta {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+/* small note */
+.pw-note {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.82rem;
+}
+
+/* Animations: open paper with bounce */
+@keyframes pw-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* subtle entrance when result shown */
+.pw-result:not([hidden]) .pw-paper {
+  animation: pw-pop 0.65s cubic-bezier(0.18, 0.9, 0.3, 1) both;
+}
+
+/* responsiveness */
+@media (max-width: 520px) {
+  .pw-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+  .pw-title {
+    font-size: 1.35rem;
+  }
+  .pw-btn {
+    padding: 10px 14px;
+    font-size: 0.98rem;
+  }
+  .pw-paper {
+    padding: 14px;
+  }
+}
+
+/* neat focus ring for accessibility when keyboard tabbing */
+.pw-btn:focus-visible {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25),
+    0 0 0 4px rgba(255, 255, 255, 0.06);
+}
+
+body {
+  color-interpolation-filters: var(--card-bg);
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}

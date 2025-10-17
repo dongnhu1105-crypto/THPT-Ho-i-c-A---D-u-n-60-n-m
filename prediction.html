@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bốc Thăm — Dự Đoán Buổi Học</title>
+    <link rel="stylesheet" href="prediction.css" />
+  </head>
+  <body>
+    <!-- PREDICTION WIDGET: phần có thể chèn vào bất kỳ trang nào -->
+    <section class="prediction-widget" aria-labelledby="pred-title">
+      <div class="pw-card" role="region" aria-label="Bốc thăm dự đoán buổi học">
+        <h2 id="pred-title" class="pw-title">🎲 Bốc Thăm Dự Đoán Buổi Học</h2>
+        <p class="pw-sub">
+          Nhấn <strong>Bốc Thăm Ngay</strong> để biết buổi học của bạn hôm nay
+          sẽ như thế nào — kết quả chỉ hiện với bạn.
+        </p>
+
+        <div class="pw-controls">
+          <button
+            id="pw-draw"
+            class="pw-btn pw-btn-primary"
+            aria-label="Bốc thăm dự đoán"
+          >
+            Bốc Thăm Ngay
+          </button>
+          <button
+            id="pw-reset"
+            class="pw-btn pw-btn-outline"
+            aria-label="Bốc lại dự đoán"
+            hidden
+          >
+            Bốc Lại
+          </button>
+        </div>
+
+        <div id="pw-result" class="pw-result" aria-live="polite" hidden>
+          <div class="pw-paper" id="pw-paper" role="status">
+            <p id="pw-text" class="pw-text">...</p>
+            <p id="pw-meta" class="pw-meta" aria-hidden="true"></p>
+          </div>
+        </div>
+
+        <div class="pw-note">
+          <small
+            >Lưu ý: kết quả được lưu cục bộ trong trình duyệt của bạn (chỉ bạn
+            thấy).</small
+          >
+        </div>
+      </div>
+    </section>
+
+    <script src="prediction.js"></script>
+  </body>
+</html>
