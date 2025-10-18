@@ -65,8 +65,6 @@ header h1 {
   text-align: center;
   text-shadow: 2px 2px 10px black;
   animation: fadeIn 2s ease-in-out;
-  .ten {
-  white-space: nowrap; /* không xuống dòng */
 }
 
 /* Hiệu ứng chữ xuất hiện */
