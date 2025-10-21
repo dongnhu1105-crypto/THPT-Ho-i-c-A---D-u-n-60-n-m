@@ -1508,41 +1508,5 @@ img, video {
     }
   }
 }
-/* Ẩn menu mặc định */
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 70%; /* hoặc 100% nếu muốn full màn hình */
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9); /* nền tối trong suốt nhẹ */
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: 1000;
-  border-radius: 0; /* bỏ bo góc nếu không muốn */
-}
 
-/* Khi mở menu */
-.menu.active {
-  display: flex;
-  animation: fadeIn 0.3s ease;
-}
-
-/* Hiệu ứng mở */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Nút icon menu */
-.menu-icon {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1100;
-  cursor: pointer;
-}
 
