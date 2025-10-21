@@ -1267,25 +1267,6 @@ h2 {
   }
 }
 @media (max-width: 768px) {
-  /* Mọi thứ trong đây chỉ áp dụng cho điện thoại hoặc màn hình nhỏ */
-
-  body {
-    font-size: 16px; /* chữ vừa phải hơn */
-    padding: 10px;
-  }
-
-  .container {
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  nav ul {
-    flex-direction: column; /* menu chuyển từ ngang sang dọc */
   }
 /* ===========================
    📱 Responsive chỉ cho điện thoại
