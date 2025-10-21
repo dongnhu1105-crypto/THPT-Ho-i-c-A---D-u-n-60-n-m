@@ -1415,4 +1415,52 @@ img, video {
     text-align: center;
   }
 }
+/* ===== THANH TÌM KIẾM GỐC ===== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px auto;
+  width: 60%; /* mặc định cho PC */
+}
 
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #005ec7;
+}
+
+/* ===== TINH GỌN TRÊN ĐIỆN THOẠI ===== */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 90%;
+    gap: 5px;
+  }
+
+  .search-bar input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .search-bar button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
