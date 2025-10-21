@@ -1464,3 +1464,48 @@ img, video {
     font-size: 14px;
   }
 }
+/* ================= MENU GỌN TRÊN ĐIỆN THOẠI ================= */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống hàng nếu quá dài */
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background: rgba(60, 60, 60, 0.9);
+    width: 95%;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #3a3a3a;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+    color: #bde3f2;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  nav ul li img,
+  nav ul li i {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+  }
+
+  /* Nếu bị tràn thì giảm kích thước chữ hơn nữa ở màn hình nhỏ */
+  @media (max-width: 480px) {
+    nav ul li a {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
+}
+
