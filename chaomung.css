@@ -1380,3 +1380,39 @@ h2 {
     border-radius: 8px;
   }
 }
+/* ===== CÂN ĐỐI CHO MÁY TÍNH ===== */
+body {
+  max-width: 100%;
+  zoom: 1; /* đảm bảo không bị thu nhỏ */
+  font-size: 18px; /* chữ to, rõ hơn */
+}
+
+/* nếu bạn có dùng container */
+.container {
+  width: 90%; /* chiếm 90% chiều rộng màn hình */
+  max-width: 1600px; /* cho phép to hơn trên máy tính lớn */
+  margin: 0 auto;
+}
+
+/* ảnh hoặc nội dung trung tâm */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== RESPONSIVE CHO ĐIỆN THOẠI ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* chữ nhỏ vừa cho màn hình nhỏ */
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
