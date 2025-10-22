@@ -1508,78 +1508,55 @@ img, video {
     }
   }
 }
-/* ----- MỤC LỤC NẰM NGANG TRÊN ĐIỆN THOẠI ----- */
+/* ----- BIẾN MENU DỌC THÀNH NGANG TRÊN ĐIỆN THOẠI ----- */
 @media (max-width: 768px) {
+  #scrollMenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222; /* nền đen */
+    border-radius: 0;
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    z-index: 9999;
+    width: 100%;
+    overflow-x: auto;
+  }
+
   #scrollMenu ul {
-    display: flex;
-    flex-wrap: nowrap; /* Không xuống dòng */
-    overflow-x: auto;  /* Cho phép cuộn ngang nếu dài */
-    -webkit-overflow-scrolling: touch; /* cuộn mượt trên iPhone */
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   #scrollMenu li {
-    flex: 0 0 auto; /* Giữ kích thước gốc, không co giãn */
-    margin-right: 10px;
+    flex: 1;
+    text-align: center;
   }
 
   #scrollMenu a {
     display: block;
-    padding: 8px 12px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    text-decoration: none;
-    white-space: nowrap; /* Không ngắt dòng chữ */
-    color: #333;
-  }
-
-  #scrollMenu a:hover {
-    background-color: #f0f0f0;
-  }
-}
-/* ----- MENU NẰM NGANG TRÊN ĐIỆN THOẠI ----- */
-@media (max-width: 768px) {
-  #scrollMenu {
-    width: 100%;
-    overflow-x: auto; /* Cho phép cuộn ngang */
-    white-space: nowrap;
+    padding: 6px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
     background: #fff;
-  }
-
-  #scrollMenu ul {
-    display: flex !important; /* Ép hiển thị nằm ngang */
-    flex-direction: row !important;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    list-style: none;
-    padding: 8px;
-    margin: 0;
-  }
-
-  #scrollMenu li {
-    display: inline-block !important; /* Ép không xuống dòng */
-    flex: 0 0 auto;
-  }
-
-  #scrollMenu a {
-    display: inline-block;
-    padding: 8px 12px;
-    background: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    color: #000;
     text-decoration: none;
-    white-space: nowrap;
-    color: #333;
-    font-size: 14px;
   }
 
   #scrollMenu a:hover {
-    background: #f0f0f0;
+    background: #f1f1f1;
   }
 }
+
 
 
