@@ -612,6 +612,36 @@ window.addEventListener('scroll', function() {
     Hiệu trưởng: Ông Nguyễn Trung kiên
   </span>
 </div>
+<script>
+let lastScrollY = window.scrollY;
+let timer;
+const menu = document.getElementById('scrollMenu');
+
+window.addEventListener('scroll', () => {
+  // Chỉ áp dụng cho điện thoại
+  if (window.innerWidth <= 768) {
+    clearTimeout(timer);
+
+    if (window.scrollY > lastScrollY + 5) {
+      // Vuốt xuống → ẩn menu
+      menu.classList.add('hide');
+      menu.classList.remove('show');
+    } else if (window.scrollY < lastScrollY - 5) {
+      // Vuốt lên → hiện menu
+      menu.classList.add('show');
+      menu.classList.remove('hide');
+    }
+
+    // Khi dừng cuộn → hiện lại menu sau 0.5s
+    timer = setTimeout(() => {
+      menu.classList.add('show');
+      menu.classList.remove('hide');
+    }, 500);
+
+    lastScrollY = window.scrollY;
+  }
+});
+</script>
 
 
 
