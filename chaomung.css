@@ -1464,4 +1464,27 @@ img, video {
     font-size: 14px;
   }
 }
+/* Hiệu ứng ẩn/hiện menu khi cuộn - chỉ cho điện thoại */
+@media (max-width: 768px) {
+  #scrollMenu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  /* Khi ẩn (vuốt xuống) */
+  #scrollMenu.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  /* Khi hiện (vuốt lên hoặc dừng lại) */
+  #scrollMenu.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
