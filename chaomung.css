@@ -1446,76 +1446,16 @@ img, video {
 .search-bar button:hover {
   background-color: #005ec7;
 }
-
-/* ===== TINH GỌN TRÊN ĐIỆN THOẠI ===== */
-@media (max-width: 768px) {
-  .search-bar {
-    width: 90%;
-    gap: 5px;
-  }
-
-  .search-bar input {
-    padding: 8px 10px;
-    font-size: 14px;
-  }
-
-  .search-bar button {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-}
-/* Hiệu ứng ẩn/hiện menu khi cuộn - chỉ cho điện thoại */
-@media (max-width: 768px) {
-  #scrollMenu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 999;
-  }
-
-  /* Khi ẩn (vuốt xuống) */
-  #scrollMenu.hide {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  /* Khi hiện (vuốt lên hoặc dừng lại) */
-  #scrollMenu.show {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/* Căn giữa và cố định menu trên điện thoại */
-@media (max-width: 768px) {
-  #scrollMenu {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* giúp menu luôn giữa màn hình */
-    width: 80%; /* có thể chỉnh thành 100% nếu muốn full chiều ngang */
-    margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  #scrollMenu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    padding: 8px 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  #scrollMenu ul li {
-    margin: 4px 10px;
-  }
+#scrollMenu {
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-  
+#scrollMenu.hide {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+#scrollMenu.show {
+  transform: translateY(0);
+  opacity: 1;
+}
