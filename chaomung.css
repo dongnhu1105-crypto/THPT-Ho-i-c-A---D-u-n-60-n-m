@@ -1540,5 +1540,46 @@ img, video {
     background-color: #f0f0f0;
   }
 }
+/* ----- MENU NẰM NGANG TRÊN ĐIỆN THOẠI ----- */
+@media (max-width: 768px) {
+  #scrollMenu {
+    width: 100%;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    white-space: nowrap;
+    background: #fff;
+  }
+
+  #scrollMenu ul {
+    display: flex !important; /* Ép hiển thị nằm ngang */
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+  }
+
+  #scrollMenu li {
+    display: inline-block !important; /* Ép không xuống dòng */
+    flex: 0 0 auto;
+  }
+
+  #scrollMenu a {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #333;
+    font-size: 14px;
+  }
+
+  #scrollMenu a:hover {
+    background: #f0f0f0;
+  }
+}
 
 
