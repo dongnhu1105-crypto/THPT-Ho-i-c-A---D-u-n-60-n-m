@@ -1479,4 +1479,27 @@ img, video {
     border-radius: 16px;
   }
 }
+/* --- Căn giữa menu trên MÁY TÍNH --- */
+@media (min-width: 769px) {
+  #scrollMenu {
+    display: flex;
+    justify-content: center;  /* căn giữa ngang */
+    align-items: center;      /* căn giữa dọc nếu có chiều cao cố định */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #scrollMenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #scrollMenu ul li {
+    margin: 0 12px; /* giãn đều các mục */
+  }
+}
 
