@@ -1464,6 +1464,28 @@ img, video {
     transition: all 0.4s ease;
     transform-origin: bottom center;
   }
+#scrollMenu {
+  position: fixed;
+  top: 0;                              /* luôn nằm trên cùng */
+  left: 50%;
+  transform: translateX(-50%);         /* căn giữa tuyệt đối */
+  z-index: 9999;
+  width: auto;
+  padding-top: 8px;
+}
+
+#scrollMenu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  padding: 10px 25px;
+  border-radius: 40px;
+
+  background: rgba(0, 0, 0, 0.85);      /* nền mờ */
+  backdrop-filter: blur(6px);
+}
 
 
 
