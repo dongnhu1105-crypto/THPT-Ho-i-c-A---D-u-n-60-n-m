@@ -1465,43 +1465,5 @@ img, video {
     transform-origin: bottom center;
   }
 
-  /* Khi ẩn thì thu nhỏ lại, mờ đi */
-  #scrollMenu.hide {
-    transform: scale(0.6) translateY(150%);
-    opacity: 0.4;
-    border-radius: 50px;
-  }
-
-  /* Khi hiện thì phóng to lại bình thường */
-  #scrollMenu.show {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-    border-radius: 16px;
-  }
-}
-/* Chỉ áp dụng trên máy tính */
-@media (min-width: 992px) {
-  #scrollMenu {
-    position: fixed;
-    top: 0;                     /* luôn dính trên cùng */
-    left: 50%;
-    transform: translateX(-50%); /* căn giữa tuyệt đối */
-    z-index: 9999;
-    width: auto;
-    padding-top: 10px;
-  }
-
-  #scrollMenu ul {
-    display: flex;
-    gap: 25px;
-    padding: 12px 35px;
-    border-radius: 40px;
-
-    /* Nền menu */
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(6px);
-    align-items: center;
-  }
-}
 
 
