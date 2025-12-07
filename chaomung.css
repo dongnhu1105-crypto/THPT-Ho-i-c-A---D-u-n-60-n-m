@@ -1486,6 +1486,57 @@ img, video {
   background: rgba(0, 0, 0, 0.85);      /* nền mờ */
   backdrop-filter: blur(6px);
 }
+/* RESET TOÀN BỘ SCROLLMENU */
+#scrollMenu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+
+  width: auto !important;
+  margin: 0 !important;
+  padding: 10px 0 !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  float: none !important;      /* xoá float */
+  text-align: center !important;
+}
+
+/* RESET UL */
+#scrollMenu ul {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  list-style: none;
+  margin: 0 !important;
+  padding: 10px 30px !important;
+
+  gap: 20px;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 40px;
+}
+
+/* RESET LI */
+#scrollMenu ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+/* RESET A */
+#scrollMenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
 
 
 
